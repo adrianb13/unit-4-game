@@ -1,0 +1,57 @@
+header {
+    border: 2px solid red;
+    padding: 20px 40px 20px 40px;
+    background-color: red;
+    font: blue;
+    font-size: 50px;
+    text-align: center;
+}
+    .directionsBox {
+        border: lightslategray;
+        background-color: lightslategray;
+        font-size: 120%;
+        width: 640px;
+        margin: 30px auto 30px auto;
+        padding: 10px;
+    }
+    .randomBox {
+        width: 185px;
+        height: 80px;
+        margin: 10px auto 10px auto;
+        padding: 10px;
+        font-size: 100%;
+        background-color: lightgreen;
+    }
+    .number {
+        font-size: 60px;
+    }
+    .crystals {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+    .crystalWidth {
+        width: 450px;
+        margin: 10px auto 10px auto;
+    }
+    .floatLeft {
+        float: left;
+        margin-left: 10px;
+    }
+    .yourScore {
+        width: 185px;
+        height: 80px;
+        margin: 10px auto 10px auto;
+        padding: 10px;
+        font-size: 100%;
+        background-color: orange;
+    }
+    .winLossBox {
+        width: 185px;
+        height: 70px;
+        margin: 10px auto 10px auto;
+        padding: 10px;
+        font-size: 100%;
+        background-color: gray;
+        font-size: 30px;
+    }
