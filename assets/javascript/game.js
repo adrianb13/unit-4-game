@@ -16,6 +16,7 @@ var yourScore = 0;
 var wins = 0;
 var losses = 0;
 
+
 var randomNumber = (Math.floor(Math.random() * 102) + 19);
 console.log(randomNumber);
 $("#randomNumber").text(randomNumber);
@@ -38,19 +39,17 @@ var crystal4 = crystalNumbers[3];
     
 
 $("#crystal1").on("click", function() {
-
-    console.log(crystal1);
     counter1 += crystal1;
     yourScore = counter1+counter2+counter3+counter4
     $("#totalScore").text(yourScore);
-    console.log(counter1);
     randomNumber = parseInt(randomNumber);
     yourScore = parseInt(yourScore);
 
     winOrLose();
+    console.log(yourScore);
     }); 
 
-    $("#crystal2").on("click", function() {
+$("#crystal2").on("click", function() {
     counter2 += crystal2;
     yourScore = counter1+counter2+counter3+counter4
     $("#totalScore").text(yourScore);
@@ -58,9 +57,10 @@ $("#crystal1").on("click", function() {
     yourScore = parseInt(yourScore);
 
     winOrLose();
+    console.log(yourScore);
     }); 
 
-    $("#crystal3").on("click", function() {
+$("#crystal3").on("click", function() {
     counter3 += crystal3;
     yourScore = counter1+counter2+counter3+counter4
     $("#totalScore").text(yourScore);
@@ -68,9 +68,10 @@ $("#crystal1").on("click", function() {
     yourScore = parseInt(yourScore);
 
     winOrLose();
+    console.log(yourScore);
     }); 
 
-    $("#crystal4").on("click", function() {
+$("#crystal4").on("click", function() {
     counter4 += crystal4;
     yourScore = counter1+counter2+counter3+counter4
     $("#totalScore").text(yourScore);
@@ -79,6 +80,8 @@ $("#crystal1").on("click", function() {
 
     winOrLose();
     console.log(yourScore);
+    console.log(counter4);
+
     });
 
 function winOrLose () {
@@ -87,27 +90,33 @@ function winOrLose () {
         losses = losses + 1;
         $("#losses").text(losses);
         console.log(losses);
-        resetAll();
+        resetAll()
+        yourScore = 0;
+        counter1 = 0;
+        counter2 = 0;
+        counter3 = 0;
+        counter4 = 0;
     } else if (yourScore === randomNumber) {
         alert("You Win");
         wins = wins + 1;
         $("#wins").text(wins);
         console.log(wins);
         resetAll();
+        yourScore = 0;
+        counter1 = 0;
+        counter2 = 0;
+        counter3 = 0;
+        counter4 = 0;
       }
-}
+};
 
 function resetAll () {
     var randomNumber = "";
     var crystalNumbers = [];
     var crystal1 = "";
-    var counter1 = 0;
     var crystal2 = "";
-    var counter2 = 0;
     var crystal3 = "";
-    var counter3 = 0;
     var crystal4 = "";
-    var counter4 = 0;
     var yourScore = 0;
     var randomNumber = (Math.floor(Math.random() * 102) + 19);
     console.log(randomNumber);
@@ -127,8 +136,8 @@ function resetAll () {
         crystal3 = parseInt(crystal3);
     var crystal4 = crystalNumbers[3];
         crystal4 = parseInt(crystal4);
-
     $("#totalScore").text(yourScore);
+    console.log(yourScore)
 };
   
 
