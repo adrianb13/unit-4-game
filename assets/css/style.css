@@ -1,13 +1,16 @@
 header {
-    border: 2px solid red;
+    border-bottom: 2px solid skyblue;
     padding: 20px 40px 20px 40px;
-    background-color: red;
-    font: blue;
+    background-color: rgb(105, 160, 211);
+    color: rgb(0, 0, 92);
     font-size: 50px;
     text-align: center;
 }
 body {
     background-color: black;
+    background: url("../images/Boulders.jpg");
+    background-size: auto 100% ;
+    background-position: center;
 }
     .directionsBox {
         border: lightslategray;
@@ -22,8 +25,8 @@ body {
         height: 80px;
         margin: 10px auto 10px auto;
         padding: 10px;
-        font-size: 100%;
-        background-color: lightgreen;
+        font-size: 110%;
+        background-color: rgb(0, 255, 0);
     }
     .number {
         font-size: 60px;
@@ -31,13 +34,33 @@ body {
     .crystals {
         width: 100px;
         height: 100px;
-        border: 1px solid black;
+        border: 2px solid gray;
         background-color: white;
         text-align: center;
     }
     .crystalWidth {
-        width: 450px;
+        width: 460px;
         margin: 10px auto 10px auto;
+    }
+    .crystal1 {
+        background: url(../images/Rocks1.jpg) no-repeat;
+        background-size: 100px 100px;
+        background-position: center;
+    }
+    .crystal2 {
+        background: url(../images/Rocks2.jpg) no-repeat;
+        background-size: 100px 100px;
+        background-position: center;
+    }
+    .crystal3 {
+        background: url(../images/Rocks3.jpg) no-repeat;
+        background-size: 100px 100px;
+        background-position: center;
+    }
+    .crystal4 {
+        background: url(../images/Rocks4.jpg) no-repeat;
+        background-size: 100px 100px;
+        background-position: center;
     }
     .floatLeft {
         float: left;
@@ -48,8 +71,8 @@ body {
         height: 80px;
         margin: 10px auto 10px auto;
         padding: 10px;
-        font-size: 100%;
-        background-color: orange;
+        font-size: 120%;
+        background-color: rgb(255, 199, 14);
     }
     .winLossBox {
         width: 185px;
@@ -57,6 +80,38 @@ body {
         margin: 10px auto 10px auto;
         padding: 10px;
         font-size: 100%;
-        background-color: gray;
+        background-color: rgb(179, 0, 179);
         font-size: 30px;
+    }
+
+    @media (min-width: 461px) and (max-width: 640.1px) {
+        .directionsBox {
+            width: 100%;
+        }
+    }
+    @media (max-width: 460.98px) {
+        .directionsBox {
+            width: 100%;
+        }
+        .crystals {
+            width: 75px;
+            height: 75px;
+        }
+        .crystalWidth {
+            width: 100%;
+            margin: 10px auto 10px auto;
+            align-items: center;
+        }
+        .crystal1 {
+            background-size: 75px 75px;
+        }
+        .crystal2 {
+            background-size: 75px 75px;
+        }
+        .crystal3 {
+            background-size: 75px 75px;
+        }
+        .crystal4 {
+            background-size: 75px 75px;
+        }   
     }
