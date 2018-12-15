@@ -22,7 +22,7 @@ $("#randomNumber").text(randomNumber);
 
 for (i=0; i<2; i++) {
     crystalNumbers[i] = (Math.floor(Math.random() * 12) +1);
-    crystalNumbers.push(crystalNumbers[i]);
+    crystalNumbers.push(crystalNumbers[i]); 
 }
 crystalNumbers.push(Math.floor(Math.random() * 5) *2 +1);
 
@@ -35,15 +35,16 @@ var crystal3 = crystalNumbers[2];
 var crystal4 = crystalNumbers[3];
     crystal4 = parseInt(crystal4);
     
-    
-
-$("#crystal1").on("click", function() {
-    counter1 += crystal1;
+function total () {
     yourScore = counter1+counter2+counter3+counter4
     $("#totalScore").text(yourScore);
     randomNumber = parseInt(randomNumber);
     yourScore = parseInt(yourScore);
+}    
 
+$("#crystal1").on("click", function() {
+    counter1 += crystal1;
+    total();
     winOrLose();
     console.log(yourScore);
     console.log(crystal1);
@@ -51,11 +52,7 @@ $("#crystal1").on("click", function() {
 
 $("#crystal2").on("click", function() {
     counter2 += crystal2;
-    yourScore = counter1+counter2+counter3+counter4
-    $("#totalScore").text(yourScore);
-    randomNumber = parseInt(randomNumber);
-    yourScore = parseInt(yourScore);
-
+    total();
     winOrLose();
     console.log(yourScore);
     console.log(crystal2);
@@ -63,11 +60,7 @@ $("#crystal2").on("click", function() {
 
 $("#crystal3").on("click", function() {
     counter3 += crystal3;
-    yourScore = counter1+counter2+counter3+counter4
-    $("#totalScore").text(yourScore);
-    randomNumber = parseInt(randomNumber);
-    yourScore = parseInt(yourScore);
-
+    total();
     winOrLose();
     console.log(yourScore);
     console.log(crystal3);
@@ -75,11 +68,7 @@ $("#crystal3").on("click", function() {
 
 $("#crystal4").on("click", function() {
     counter4 += crystal4;
-    yourScore = counter1+counter2+counter3+counter4
-    $("#totalScore").text(yourScore);
-    randomNumber = parseInt(randomNumber);
-    yourScore = parseInt(yourScore);
-
+    total();
     winOrLose();
     console.log(yourScore);
     console.log(counter4);
@@ -99,7 +88,7 @@ function winOrLose () {
         $("#wins").text(wins);
         console.log(wins);
         resetAll();
-      }
+    }
 };
 
 function resetAll () {
